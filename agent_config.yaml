@@ -1,0 +1,11 @@
+
+# Configure your LLM provider (keep 'mock' to run without keys).
+provider: "mock"           # options: mock | openai | azure_openai
+model: "gpt-4o-mini"       # replace with your available model when not using mock
+max_tokens: 400
+temperature: 0.2
+
+env:
+  OPENAI_API_KEY: "${OPENAI_API_KEY}"
+  AZURE_OPENAI_API_KEY: "${AZURE_OPENAI_API_KEY}"
+  AZURE_OPENAI_ENDPOINT: "${AZURE_OPENAI_ENDPOINT}"
