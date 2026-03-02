@@ -1,8 +1,34 @@
 # AutoMed-AG2-Starter
 
-> Educational demo project based on **AG2 (AutoGen)** concepts.  
-> Built for DeVry University / IBM Skills Network guided project.  
+> AutoMed-AG2 is a multi-agent clinical triage prototype that demonstrates coordinated agent-to-agent reasoning using a modular > orchestration architecture. The system models how healthcare decision pipelines can be structured using specialized agents
+> communicating through a central coordinator. 
 > ⚠️ Disclaimer: This is not medical advice — for educational use only.
+
+## Problem Statement
+
+Healthcare triage workflows require structured intake, evidence retrieval, reasoning, and safety validation. Traditional chatbots lack modular reasoning separation. This project explores how multi-agent coordination can simulate structured clinical reasoning workflows.
+
+User Input
+   ↓
+UserAgent (symptom intake)
+   ↓
+DataAgent (retrieves medical knowledge / red flags)
+   ↓
+ClinicianAgent (LLM reasoning & assessment)
+   ↓
+Coordinator (orchestrates flow & safety checks)
+   ↓
+Structured Output + Safety Disclaimer
+
+---
+
+## Technical Design
+
+- Agents implemented in Python
+- YAML-based agent configuration
+- Mock LLM provider (pluggable for OpenAI/AutoGen)
+- Structured output formatting
+- Command-line interface for reproducible runs
 
 ## Features
 - Multi-agent architecture with:
